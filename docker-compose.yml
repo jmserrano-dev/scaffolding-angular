@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  scaffolding-angular:
+    image: scaffolding-angular
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - SPA_ENVIRONMENT=prod
+      - SPA_SERVER_URL=http://prod-endpoint.com/api
+    ports:
+      - 80:5000
